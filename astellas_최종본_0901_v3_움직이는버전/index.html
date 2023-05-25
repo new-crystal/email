@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>한국아스텔라스제약 메디컬부스</title>
+        <link rel="stylesheet" href="data/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="data/all.min.css">
+        <link rel="stylesheet" href="data/slick/slick.css">
+        <link rel="stylesheet" href="data/slick/slick-theme.css">
+        <link rel="stylesheet" href="data/video-js.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="data/style.css?ver=1.1"/>
+
+        <script src="data/jquery.js"></script>
+        <script src="data/bootstrap/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="data/slick/slick.min.js"></script>
+        <script src="data/video.js"></script>
+    </head>
+	
+	<style media="screen">
+    .vjs-seeking .vjs-loading-spinner, .vjs-waiting .vjs-loading-spinner{
+        display: none;
+    }
+    </style>
+
+    <body oncontextmenu="return false;">
+
+        <div class="astel-slider">
+
+            <div id="section-0" ontouchend="goSlide('1');" onclick="goSlide('1');">
+                <video id="video-0" autoplay muted loop>
+                    <source src="data/video/1-1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div id="section-1">
+                <video id="video-1" autoplay muted loop>
+                    <source src="data/video/2-1.mp4" type="video/mp4">
+                </video>
+                <div id="btn-group">
+                    <div class="btn-item btn-yoro">
+                        <img src="data/btn-icon1.png">
+                        전이성 요로상피암의 치료에 <br>
+                        unmet medical needs가 <br>
+                        있다고 생각하시나요?
+                    </div>
+                    <div class="btn-item btn-junlib">
+                        <img src="data/btn-icon2.png">
+                        전립선암의 <br>
+                        조기치료가 중요하다고 <br>
+                        생각하시나요?
+                    </div>
+                </div>
+            </div>
+
+            <!-- 요로 슬라이드1 -->
+            <div id="section-2">
+                <video id="video-2" class="video-js" data-video="2" muted loop controls data-setup="{}">
+                    <source src="data/video/3.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap">
+                    <div class="helper-wrap">
+                        <div>
+                            <img src="data/1-1.svg" class="icon mi" id="goTime1-1">
+                        </div>
+                        <div class="">
+                            <img src="data/1-2.svg" class="icon pipe" id="goTime1-2">
+                        </div>
+                        <div class="">
+                            <img src="data/1-3.svg" class="icon refer" id="goTime1-3">
+                        </div>
+                        <div class="">
+                            <img src="data/1-4.svg" class="icon pipe" id="goTime1-4">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <img src="data/right.svg" class="next img-arrow" onclick="navNext();">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 요로 슬라이드2 -->
+            <div id="section-3">
+                <video id="video-3" class="video-js" data-video="3" muted loop>
+                    <source src="data/video/4-2.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe" onclick="navPipe('yoro');">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer('yoro');">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 요로 파이프라인 -->
+			<div id="section-4">
+                <video id="video-4" class="video-js" data-video="4" muted loop>
+                    <source src="data/video/7.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer('yoro');">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 전립 슬라이드1 -->
+            <div id="section-5">
+                <video id="video-5" class="video-js" data-video="5" muted loop controls data-setup="{}">
+                    <source src="data/video/5.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap">
+                    <div class="helper-wrap">
+                        <div>
+                            <img src="data/2-1.svg" class="icon mi" id="goTime2-1">
+                        </div>
+                        <div class="">
+                            <img src="data/2-2.svg" class="icon pipe" id="goTime2-2">
+                        </div>
+                        <div class="">
+                            <img src="data/2-3.svg" class="icon refer" id="goTime2-3">
+                        </div>
+                        <div class="">
+                            <img src="data/2-4.svg" class="icon pipe" id="goTime2-4">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <img src="data/right.svg" class="next img-arrow" onclick="navNext();">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 전립 슬라이드2 -->
+            <div id="section-6">
+                <video id="video-6" class="video-js" data-video="6" muted loop>
+                    <source src="data/video/4-1.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe" onclick="navPipe('junlib');">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer('junlib');">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 전립선 파이프라인 -->
+            <div id="section-7">
+                <video id="video-7" class="video-js" data-video="7" muted loop>
+                    <source src="data/video/7.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer('junlib');">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- yoro 레퍼런스 -->
+            <div id="section-8">
+                <video id="video-8" class="video-js" data-video="8" muted loop>
+                    <source src="data/video/8.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe" onclick="navPipe('yoro');">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer();">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- junlib 레퍼런스 -->
+            <div id="section-9">
+                <video id="video-9" class="video-js" data-video="9" muted loop>
+                    <source src="data/video/9.mp4" type="video/mp4">
+                </video>
+                <div class="bottom-wrap bottom-wrap2">
+                    <div class="helper-wrap">
+                        <div class="tip-wrap">
+                            <div class="tip tip1">
+                                추가로 궁금하신 내용은 의학정보팀에 문의하실 수 있습니다.
+                            </div>
+                            <img src="data/mi.svg" class="icon mi" onclick="navMi();">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip2">
+                                아스텔라스제약의 파이프라인을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/pipe.svg" class="icon pipe" onclick="navPipe('junlib');">
+                        </div>
+                        <div class="tip-wrap">
+                            <div class="tip tip3">
+                                참고문헌을 확인하실 수 있습니다.
+                            </div>
+                            <img src="data/refer.svg" class="icon refer" onclick="navRefer();">
+                        </div>
+                    </div>
+                    <div class="nav-wrap">
+                        <div class="">
+                            <img src="data/left.svg" class="prev img-arrow" onclick="navPrev();">
+                        </div>
+                        <div class="">
+                            <img src="data/home.svg" class="home img-home" onclick="navHome();">
+                        </div>
+                        <div class="">
+                            <!--img src="data/right.svg" class="next img-arrow" onclick="navNext();"!-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<script type="text/javascript">
+
+// 영상 슬라이더를 이동시킬 버튼별 시간값 설정
+var timeValue = [
+    {
+        "target":"1-1",
+        "time":"0"
+    },
+    {
+        "target":"1-2",
+        "time":"12.7"
+    },
+    {
+        "target":"1-3",
+        "time":"25.9"
+    },
+    {
+        "target":"1-4",
+        "time":"49.9"
+    },
+    {
+        "target":"2-1",
+        "time":"0"
+    },
+    {
+        "target":"2-2",
+        "time":"11"
+    },
+    {
+        "target":"2-3",
+        "time":"30.4"
+    },
+    {
+        "target":"2-4",
+        "time":"51.4"
+    }
+];
+
+    var prevSlide = 0;
+    var prevSlide2 = 0;
+    var nowSlide = 0;
+
+    var nowTip = 0;
+    var tipTimer;
+    var btnInterval;
+
+    var AudioContext;
+    var audioContext;
+    var backTarget = 2;
+
+    window.onload = function() {
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
+            AudioContext = window.AudioContext || window.webkitAudioContext;
+            audioContext = new AudioContext();
+            const myAudio = new Audio(); // Aduio 객체 생성
+            myAudio.src = "data/bg.mp3"; // 음원 파일 설정
+            myAudio.loop = true;
+            myAudio.play(); // 음원 재생
+        }).catch(e => {
+            console.error(`Audio permissions denied: ${e}`);
+        });
+    }
+
+    $(function() {
+        console.log( "ㅡASTEL-READY" );
+        setBtnInterval();
+		
+		function videoInit(){
+			console.log("videoInit");
+		
+			myPlayer2.currentTime(0);
+			myPlayer3.currentTime(0);
+			myPlayer5.currentTime(0);
+			myPlayer6.currentTime(0);
+			myPlayer7.currentTime(0);
+			myPlayer8.currentTime(0);
+			myPlayer9.currentTime(0);
+
+			myPlayer0.play();
+			myPlayer1.play();
+			myPlayer2.pause();
+			myPlayer3.play();
+			myPlayer4.play();
+			myPlayer5.pause();
+			myPlayer6.play();
+			myPlayer7.play();
+			myPlayer8.play();
+			myPlayer9.play();
+		}
+
+        $(".astel-slider").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            draggable: false,
+            infinite: false,
+            swipe: false,
+        });
+
+        $('.astel-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            console.log('SLIDE CHANGE');
+
+            prevSlide2 = prevSlide;
+            prevSlide = nowSlide;
+            nowSlide = currentSlide;
+
+            videoInit();
+            intervalInit();
+
+            if(nowSlide == 1){
+                setBtnInterval();
+            }else if(nowSlide == 2){
+                backTarget = 2;
+                myPlayer2.play();
+            }else if(nowSlide == 5){
+                backTarget = 5;
+                myPlayer5.play();
+            }
+        });
+		
+		function goTime(target){
+
+			var time = 0;
+			$.each(timeValue, function(i, v){
+				if(v.target == target){
+					time = v.time;
+				}
+			});
+
+			eval('myPlayer'+nowSlide+'.currentTime('+time+');');
+			eval('myPlayer'+nowSlide+'.pause();');
+		}
+		
+		var myPlayer0 = videojs('video-0');
+		var myPlayer1 = videojs('video-1');
+		var myPlayer2 = videojs('video-2');
+		var myPlayer3 = videojs('video-3');
+		var myPlayer4 = videojs('video-4');
+		var myPlayer5 = videojs('video-5');
+		var myPlayer6 = videojs('video-6');
+		var myPlayer7 = videojs('video-7');
+		var myPlayer8 = videojs('video-8');
+		var myPlayer9 = videojs('video-9');
+		
+		var flag = false;
+		$('#video-2').on("touchstart", function(){
+			if (!flag) {
+				flag = true;
+				setTimeout(function(){ flag = false; }, 100);
+				
+				if(myPlayer2.paused()){
+					myPlayer2.play();
+				} else {
+					myPlayer2.pause();
+				}
+		  }
+		  return false;
+		});
+		
+		$('#video-5').on("touchstart", function(){
+			if (!flag) {
+				flag = true;
+				setTimeout(function(){ flag = false; }, 100);
+				
+				if(myPlayer5.paused()){
+					myPlayer5.play();
+				} else {
+					myPlayer5.pause();
+				}
+		  }
+		  return false;
+		});
+		
+		$('#goTime1-1').on("click touchstart", function(){
+			goTime('1-1');
+		});
+		$('#goTime1-2').on("click touchstart", function(){
+			goTime('1-2');
+		});
+		$('#goTime1-3').on("click touchstart", function(){
+			goTime('1-3');
+		});
+		$('#goTime1-4').on("click touchstart", function(){
+			goTime('1-4');
+		});
+		$('#goTime2-1').on("click touchstart", function(){
+			goTime('2-1');
+		});
+		$('#goTime2-2').on("click touchstart", function(){
+			goTime('2-2');
+		});
+		$('#goTime2-3').on("click touchstart", function(){
+			goTime('2-3');
+		});
+		$('#goTime2-4').on("click touchstart", function(){
+			goTime('2-4');
+		});
+	
+	
+    });
+
+    function setBtnInterval(){
+		resetBtnInterval();
+        $('.btn-yoro').addClass('interval');
+        if (btnInterval ) {
+            clearInterval(btnInterval );
+        }
+        btnInterval = setInterval(function(){
+            $('.btn-item').toggleClass('interval');
+        }, 1000);
+    }
+
+
+    $('.btn-item').click(function(){
+        clearInterval(btnInterval);
+        btnInterval = setInterval(function(){
+
+        }, 1000);
+        resetBtnInterval();
+
+        setTimeout(setAddActive, 0, this);
+        setTimeout(setRemoveActive, 100, this);
+        setTimeout(setAddActive, 200, this);
+        setTimeout(setRemoveActive, 300, this);
+        setTimeout(setAddActive, 400, this);
+
+        if($(this).hasClass('btn-yoro')){
+            setTimeout(goSlide, 1000, 2);
+        }else{
+            setTimeout(goSlide, 1000, 5);
+        }
+        setTimeout(setRemoveActive, 1200, this);
+    });
+
+    function setAddActive(e){
+        $(e).addClass('active');
+    }
+    function setRemoveActive(e){
+        $(e).removeClass('active');
+    }
+    function resetBtnInterval(){
+        $('.btn-item').removeClass('interval');
+    }
+
+    function goSlide(index){
+        $(".astel-slider").slick('slickGoTo', index);
+    }
+
+    function navHome(){
+        $(".astel-slider").slick('slickGoTo', 0);
+    }
+    function navPrev(){
+        if(nowSlide == 2 || nowSlide == 5){
+            $(".astel-slider").slick('slickGoTo', 1);
+        }else if(nowSlide == 3){
+            $(".astel-slider").slick('slickGoTo', 2);
+        }else if(nowSlide == 4 || nowSlide == 8){
+                $(".astel-slider").slick('slickGoTo', 3);
+        }
+        else if(nowSlide == 6){
+            $(".astel-slider").slick('slickGoTo', 5);
+        }else if(nowSlide == 7 || nowSlide == 9){
+                $(".astel-slider").slick('slickGoTo', 6);
+        }else{
+            $(".astel-slider").slick('slickGoTo', prevSlide);
+        }
+    }
+    function navNext(){
+        if(nowSlide == 2){
+            $(".astel-slider").slick('slickGoTo', 3);
+        }else if(nowSlide == 3){
+            $(".astel-slider").slick('slickGoTo', 5);
+        }else if(nowSlide == 5){
+            $(".astel-slider").slick('slickGoTo', 6);
+        }else if(nowSlide == 6){
+            $(".astel-slider").slick('slickGoTo', 2);
+        }else if(nowSlide == 7){
+            $(".astel-slider").slick('slickGoTo', 2);
+        }else if(nowSlide == 8){
+            $(".astel-slider").slick('slickGoTo', 2);
+        }else if(nowSlide == 9){
+            $(".astel-slider").slick('slickGoTo', 2);
+        }
+    }
+
+    function navMi(){
+        window.open("data/pdf.html");
+    }
+    function navPipe(target){
+	if(target == 'yoro'){
+        $(".astel-slider").slick('slickGoTo', 4);
+		}else if(target == 'junlib'){
+		$(".astel-slider").slick('slickGoTo', 7);
+		}
+    }
+    function navRefer(target){
+        if(target == 'yoro'){
+            $(".astel-slider").slick('slickGoTo', 8);
+        }else if(target == 'junlib'){
+            $(".astel-slider").slick('slickGoTo', 9);
+        }
+    }
+
+    function intervalInit(){
+        nowTip = 0;
+        clearInterval(tipTimer);
+        $('.tip1, .tip2, .tip3').hide();
+        if(nowSlide == 3 || nowSlide == 4 || nowSlide == 6 || nowSlide == 7 || nowSlide == 8 || nowSlide == 9){
+            tipTimer = setInterval(function() {
+                if(nowTip == 0){
+                    nowTip = 1;
+                    $('.tip1').show('slow');
+                }else if(nowTip == 1){
+                    nowTip = 2;
+                    $('.tip1').hide('slow');
+                    $('.tip2').show('slow');
+                }else if(nowTip == 2){
+                    nowTip = 3;
+                    $('.tip2').hide('slow');
+                    $('.tip3').show('slow');
+                }else if(nowTip == 3){
+                    nowTip = 0;
+                    $('.tip3').hide('slow');
+                }
+            }, 3000);
+        }
+    }
+</script>
