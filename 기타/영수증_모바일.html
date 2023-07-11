@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="max-width:100%;">
+        <div>
+            <img src="https://icomes.or.kr/main/img/receipt_top_mb.png" alt="" style="width:100%; max-width:100%;">
+            <div style="padding:0 24px; margin-top:30px;">
+                <table style="border-collapse:collapse; border-spacing:0; width:100%;">
+                    <tbody>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-top:3px solid #000066; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">
+                                Payment Date</th>
+                            <td
+                                style="padding:12px; font-size:14px; color:#000000; border-top:3px solid #000066; border-bottom:1px solid #000066;">
+                                <?= $payment_date ?></td>
+                        </tr>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">
+                                Registration No.</th>
+                            <td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;">
+                                <?= $register_no ?></td>
+                        </tr>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">
+                                Name</th>
+                            <td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;">
+                                <?= $name ?></td>
+                        </tr>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">
+                                Country</th>
+                            <td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;">
+                                <?= $nation ?></td>
+                        </tr>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">
+                                Registration Fee</th>
+                            <td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;">
+                                <?= $total_price ?></td>
+                        </tr>
+                        <tr>
+                            <th width="135"
+                                style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:3px solid #000066; text-align:left;">
+                                Payment Method</th>
+                            <td style="padding:12px; font-size:14px; color:#000000; border-bottom:3px solid #000066;">
+                                <?= $payment_method ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <img src="https://icomes.or.kr/main/img/receipt_bottom_mb.png" alt="" style="width:100%; max-width:100%;">
+        </div>
+    </div>
+</body>
+</html>

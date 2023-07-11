@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <!-- <script language="javascript">
+        window.addEventListener("load", function() {
+            html2canvas(document.getElementById('pdfDiv'), {
+                onrendered: function(canvas) {
+                    var imgData = canvas.toDataURL('image/png');
+                    var doc = new jsPDF('p', 'pt', 'a4');
+                    doc.addImage(imgData, 'PNG', 0, 0, 595, 842);
+                    doc.save('html.pdf');
+                }
+            });
+        });
+    </script> -->
+</head>
+<body>
+	<div id="pdfDiv" style="width:794px;">
+		<div    style="position:fixed; width:100%; height:100%; top:0; left:0; background:url('https://iscp2023.org/main/img/img_certifi_bg.png') no-repeat center /contain; box-sizing:border-box;">
+
+	<div style="max-width:395px; margin:146px auto 45px; text-align:center;">
+		<img src="https://iscp2023.org/main/img/img_certificate_title_all.png" alt=""/>
+	</div>
+	<p style="font-family: Noto Serif, serif; font-size:40px; font-weight:bold; color:#422918; text-align:center; margin:0; line-height:1.5;">
+		<img style="margin-bottom:26px;" src="https://iscp2023.org/main/img/img_certificate_title_all2.png" alt=""/><br/>
+		<img src="https://iscp2023.org/main/img/img_certificate_title_all3.png" alt=""/>
+		<!--<span style="font-family: inherit; list-style:none; font-size:14px; display:block; margin:0 0 26px 0; font-weight:bold;">This certificate is presented to</span>-->
+	</p>
+	<ul style="text-align:center; padding-left:0; margin-top:26px;">
+		<!-- <li style="font-family:\'Kepler Std\',sans-serif; list-style:none; font-size:20px; margin:0 0 20px 0; font-weight:bold;">This certificate is presented to</li> -->
+		<li class="save_name" style="font-family: Open Sans, sans-serif; list-style:none; font-size:22px; margin:0 0 10px 0; font-weight:bold;"></li>
+		<li class="save_affiliation" style="font-family: Open Sans, sans-serif; list-style:none; font-size:14px; margin:0;"></li>
+	</ul>
+	<p></p>
+	<p style="margin-top:60px; text-align:center;"><img src="https://iscp2023.org/main/img/img_certificate_title_all4.png" alt=""/></p>
+	<ul style="display:block; width:700px; margin:80px auto 0; font-size:0;">
+		<li style="display:inline-block; width:45%; box-sizing:border-box; vertical-align:middle;">
+			<img src="https://iscp2023.org/main/img/certifi_sign01.png" style="vertical-align:middle;" alt="">
+			<div style="display:inline-block; vertical-align:middle;">
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:10px; font-weight:bold; margin-bottom:10px;">Donghoon Choi, M.D., Ph.D</p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">Chairman, Board of directors</p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">The Korean Society of Lipid & </p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">Atherosclerosis (KSoLA)</p>
+			</div>
+		</li>
+		<li style="display:inline-block; width:50%; padding-left: 16px; box-sizing:border-box; vertical-align:middle; border-left:1px solid #422918;">
+			<img src="https://iscp2023.org/main/img/certifi_sign02.png" style="margin-right:10px; vertical-align:middle;" alt="">
+			<div style="display:inline-block; vertical-align:middle;">
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:10px; font-weight:bold; margin-bottom:10px;">Sang-Hak Lee, M.D., Ph.D</p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">Chair of Scientiﬁc Program Committee</p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">The Korean Society of Lipid &</p>
+				<p style="font-family:\'Montserrat\', sans-serif; font-size:8px; font-weight:500; line-height:10px; margin:0 0 2px 0;">Atherosclerosis (KSoLA)</p>
+			</div>
+		</li>
+	</ul>
+</div>
+</div>
+</body>
+<!-- <script language="javascript">
+    html2canvas(document.getElementById('pdfDiv')).then(function(canvas) {
+        var imgData = canvas.toDataURL('image/png');
+        var doc = new jsPDF('p', 'pt', 'a4');
+        doc.addImage(imgData, 'PNG', 0, 0, 595, 842);
+        doc.save('html.pdf');
+    });
+    </script> -->
+    <script language = "javascript">
+		// let doc = new jsPDF('p','pt','a4');
+		// const save_affiliation = document.querySelector(".save_affiliation");
+		// const save_name = document.querySelector(".save_name");
+	
+		// const name = window.location.search.split("=")[1].split("&")[0]
+		// const affiliation = window.location.search.split("=")[3]
+	
+		// const nameText = document.createTextNode(name)
+		// const affiliationText = document.createTextNode(affiliation)
+	
+		// save_name.appendChild(nameText);
+		// save_affiliation.appendChild(affiliationText)
+		let doc = new jsPDF('p','pt','a4');
+		doc.addHTML(document.body,function() {
+			doc.save('html.pdf');
+		});
+		 
+		</script>
+</html>
