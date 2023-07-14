@@ -44,27 +44,187 @@ h2{
     font-size: 18px!important;
     font-weight: 600!important;
 }
+input[type=text] {
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    height: 2.5rem;
+    /* width: 300px; */
+}
+
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    transform: translateY(1.5px);
+}
+
+input[type=radio] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    transform: translateY(2.5px);
+}
+
+span {
+    color: #c1121f;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+textarea {
+    height: 150px;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p {
+    margin: 0;
+}
+
+.tbl_type01 {
+    border: 1px solid #7d8597;
+    border-top: 2px solid #7d8597;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tbl_type01 th,
+.tbl_type01 td {
+    border: 1px solid #7d8597;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tbl_type01 th,
+.tbl_type01 td {
+    border: 1px solid #7d8597;
+}
+
+th {
+    height: 50px;
+    background-color: rgb(186 230 253);
+    ;
+}
+
+.container {
+    width: 1300px;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.confirm_box {
+    width: 100%;
+    /* height: 200px; */
+    text-align: center;
+    /* border: 1px solid #eee; */
+}
+
+.confirm_box_title {
+    text-align: center;
+    background-color: rgb(186 230 253);
+}
+
+.all_checkbox {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal_checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.personal_checkbox>div {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.next_btn_box,
+.final_btn_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next_btn_box>button,
+.final_btn {
+    width: 30%;
+    height: 50px;
+    font-size: 24px;
+    border: 1px solid #7d8597;
+    margin: 20px;
+}
+
+.full_input {
+    width: 70%;
+}
+
+.tbl_type01 td {
+    padding: 8px;
+    text-align: left;
+}
+
+.wrap_2_2>table {
+    border: none;
+}
+
+.category {
+    height: 80px;
+}
+
+.select_category {
+    width: 95%;
+    height: 40px;
+    border: 1px solid #ddd;
+}
+
+.member {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.submit_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #e1e1e1;
+}
 </style>
 </head>
 
 <body>
-    <div class="w-full h-full flex items-center justify-center overflow-x-hidden">
-    <div class="w-96 bg-red-300 px-3 py-2">
+    <div class="w-full h-full flex items-center justify-center overflow-x-hidden overflow-y-scroll">
+    <div class="w-full max-w-5xl px-3 py-2">
         <div class="text-center text-2xl font-semibold">
             <h1>On-site registration(현장 등록)</h1>
         </div>
-            <div class="w-11/12 mt-5">
+        <div class="w-11/12 mt-5">
+                <div id="page_1">
                 <div>
                     <p>Name(이름)<span>*</span></p>
                     <div class="flex justify-between">
                         <input id="firstName" class="w-6/12"  placeholder="*firstName"/>
                         <input id="lastName" class="w-6/12" placeholder="*lastName"/>
                     </div>
-                    <input id="korName" class="w-[98%]" placeholder="국문이름">
+                    <input id="KoreanName" class="w-[98%]" placeholder="국문이름">
                 </div>
                 <div>
                     <p>Contry(국가)<span>*</span></p>
-                    <select id="nation_no" name="nation_no" class="px-2 py-1 w-full h-10">
+                    <select id="nation_no" name="nation_no" class="px-2 py-1 w-full h-10 border">
                         <option value="" selected="" hidden="" data-nt="82">Contry</option>
                         <option data-nt="82" value="25">Republic of Korea</option>
                         <option data-nt="93" value="122">Afghanistan</option>
@@ -290,7 +450,7 @@ h2{
                 </div>
                 <div>
                     <p>Mobile Phone Number(휴대전화번호)<span>*</span></p>
-                        <input id="phone" class="w-[98%]" placeholder="ex)010-0000-0000 *">
+                        <input id="phoneNumber" class="w-[98%]" placeholder="ex)010-0000-0000 *">
                 </div>
                 <div>
                     <p>E-mail(이메일)<span>*</span></p>
@@ -298,7 +458,7 @@ h2{
                     <input type="text" name="Email1" id="Email1" maxlength="64" value="" class="w-4/12">
                     <p>@</p>
                     <input type="text" name="Email2" id="Email2" maxlength="64" value="" class="w-4/12">
-                    <select name="Email3" id="Email3"
+                    <select name="Email3" id="Email3" class="border"
                         style="background-color:#ffffff;width:100px; height:35px;">
                         <option value="" selected="selected">직접입력</option>
                         <option value="naver.com">naver.com</option>
@@ -318,8 +478,8 @@ h2{
                 </div>
                 <div>
                     <p>Member(학회 회원 여부)<span>*</span></p>
-                    <div class="flex flex-nowrap">
-                        <div>
+                    <div class="flex flex-nowrap flex-col">
+                        <div class="block">
                             <input type="radio" id="member" />
                             <label for="member">Member(회원)</label>
                         </div>
@@ -334,7 +494,7 @@ h2{
                     <p>Type of Participation(참석유형)<span>*</span></p>
                     <div class="flex justify-between items-center">
                         <select id="Participation_1" style="background-color:#ffffff;"
-                            class="px-2 py-1 w-full h-10">
+                            class="px-2 py-1 w-full h-10 border">
                             <option value="" selected="selected">* 필수 선택사항</option>
                             <option value="Committee">Committee</option>
                             <option value="Speaker">Speaker</option>
@@ -348,7 +508,7 @@ h2{
                 <div>
                     <p>Category(참석자 구분)<span>*</span></p>
                     <div class="flex justify-between items-center">
-                        <select id="Category_1" style="background-color:#ffffff;" class="px-2 py-1 w-full h-10">
+                        <select id="Category_1" style="background-color:#ffffff;" class="px-2 py-1 w-full h-10 border">
                             <option value="" selected="selected">* 필수 선택사항</option>
                             <option value="Certified M.D.">Certified M.D.</option>
                             <option value="Fellow">Fellow</option>
@@ -387,7 +547,11 @@ h2{
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col items-center justify-center text-center">
+                <button id="page_1_btn" class="mx-auto w-60 h-15 bg-sky-900 text-white p-3 my-5 text-lg flex items-center justify-center mt-20">Next</button>
+            </div>
+        </div>
+<!-- ==========================================================================================================/ -->
+                <div id="page_2"  class="flex flex-col items-center justify-center text-center my-20" style="display: none;">
                     <h2>Session participation(세션참여 여부)<span>*</span></h2>
     
                         <p>Welcome Reception <br>- September 7(Thu) </p>
@@ -429,66 +593,563 @@ h2{
                             <input class="session_radio" type="radio" id="no_5" />
                             <label for="no_5">NO</label>
                         </div>
+                        <button id="page_2_btn" class="mx-auto w-60 h-15 bg-sky-900 text-white p-3 my-5 text-lg flex items-center justify-center mt-20">Next</button>
                 </div>
-                <div>
-                    <h2>Where did you get the information about the conference?(가입경로)</h2>
+<!-- ==========================================================================================================/ -->
+
+                <div id="page_3" class="mt-20" style="display: none;">
+                    <h2 class="mb-5">Where did you get the information about the conference?(가입경로)</h2>
                     <div class="flex flex-col">
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="A" />
                             <label for="A">Website of the Korea Society of Obesity
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="B" />
-                            <label for="B">Promotional email from the Korea Society of Obesity
+                            <label for="B">Promotional email <br>from the Korea Society of Obesity
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="C" />
-                            <label for="C">Advertising email or the bulletin board from the relevant society
+                            <label for="C">Advertising email or <br>the bulletin board from the relevant society
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="D" />
                             <label for="D">Information about affiliated companies/organizations
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="E" />
                             <label for="E">Invited as a speaker, moderator, and panelist
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="F" />
                             <label for="F">Recommended by a professor
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="G" />
                             <label for="G">Recommended by acquaintances
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="H" />
                             <label for="H">Pharmaceutical company
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="I" />
                             <label for="I">Medical community (MEDI:GATE, Dr.Ville, etc.)
 
                             </label>
                         </div>
-                        <div class="flex items-center mb-4 text-base">
+                        <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="J" />
                             <label for="J">Medical news and journal
                             </label>
                         </div>
                     </div>
+                    <button id="page_3_btn" class="mx-auto w-60 h-15 bg-sky-900 text-white p-3 my-5 text-lg flex items-center justify-center mt-20">Next</button>
                 </div>
-                </div>
+                <!-- ================================================================================================/ -->
+                <div id="page_4" class="wrap_2" style="display: none;">
+                    <div class="confirm_box mt-10">
+                        <div class="confirm_box_title flex items-center justify-center">
+                            <h1 class="text-xl">Use of Personal Information <br>(개인정보활용동의)</h1>
+                        </div>
+                        <textarea style="height: 80px;" class="border text-center w-full" disabled="" readonly="">ICOMES 2023 이용 약관 
+본 학술대회의 주관사인 대한비만학회는 학술대회 등록시스템 서비스 제공을 위하여 관계 법령에 따라 아래와 같이 개인정보를 수집, 이용하는 내용을 알리오니 자세히 읽으신 후 동의 여부를 결정하여 주십시오.
+                       
+                        </textarea>
+                    </div>
+                    <div class="all_checkbox">
+                        <input id="all_check" type="checkbox" />
+                        <label for="all_check">개인정보 수집 및 제공 동의에 모두 동의</label>
+                    </div>
+                    <div class="personal_checkbox">
+                        <div>
+                            <input id="first_check" class="check" type="checkbox" />
+                            <label for="first_check">개인정보 수집 동의 <span>(필수)</span></label>
+                        </div>
+            
+                        <textarea class="border text-base" disabled="" readonly="">
+개인정보 수집 및 이용 동의
+1. 수집항목: 성명, 휴대폰번호, 바코드 입장 정보
+2. 수집/이용 목적
+참가자들의 편의와 참가업체 상호간의 유용한 정보 교류 서비스 제공을 위한 학술대회 출입증 발급 및 전
+자명함시스템 제공에 이용되며, 본 학술대회에서 수집한 개인정보는 차기 학술대회 초대권 발송 및 안내
+를 위한 용도 외의 다른 목적으로 사용되지 않습니다.
+※ 기타 개인정보 취급에 관한 상세한 사항은 본 학술대회 홈페이지
+(https://icomes.or.kr/main/signup.php)에 공개하고 있는 “개인정보 처리방침”을 참조 하십시오.
+                        </textarea>
+                    </div>
+            
+                    <div class="personal_checkbox">
+                        <div>
+                            <input id="second_check" class="check" type="checkbox" />
+                            <label for="second_check">개인정보 2자 제공 동의<span>(필수)</span></label>
+                        </div>
+            
+                        <textarea class="border text-base" disabled="" readonly="">
+개인정보 제3자 제공 동의
+1. 개인정보 취급 업무의 위탁
+본 학술대회는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 위탁계
+약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.
+수탁 업체 : INTO-ON
+위탁 업무내용 : 등록시스템 운영위탁, 전자명함 시스템 서비스 제공 등
+이용 및 보유기간 : 위탁계약 종료 시까지
+2. 이용, 보유기간 
+개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기 합니다.
+(단, 기타 법령에 따로 정하는 경우는 해당 기간까지 보관)
+3. 기타 고지 사항
+개인정보 보호법 제15조 제1항 제3호에 따라 정보주체의 동의 없이 개인정보를 수집‧이용합니다.
+개인정보 처리사유 : 학술대회 인증 자료
+개인정보 항목 : 성명, 소속, 직위, 전화번호(휴대폰 또는 회사전화), 이메일
+수집 근거 : 「전시산업발전법」제22조
+4. 동의거부 권리 및 불이익
+필수항목을 기재하지 않거나 개인정보 수집·이용에 거부하는 경우, 본 학술대회에서 제공하는 서비스를
+이용할 수 없습니다. 또한 학술대회 출입증 발급이 불가하여 재입장 등 입장의 제한이 발생될 수 있습니다.
+                        </textarea>
+                    </div>
+            
+                    <div class="personal_checkbox">
+                        <div>
+                            <input id="third_check" class="check" type="checkbox" />
+                            <label for="third_check"> 차기 학술대회 관련 안내 이메일 수신 동의 <span style="color: #7d8597;">(선택)</span> </label>
+            
+                        </div>
+                        <table class="tbl_type01" id="optionalAgreeInfoEmail">
+                            <colgroup>
+                                <col width="40%">
+                                <col width="30%">
+                                <col width="30%">
+                            </colgroup>
+                            <tr>
+                                <th>수집 목적</th>
+                                <th class="line_th">수집 항목</th>
+                                <th class="line_th">보유 기간</th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">학술대회 관람 설문조사<br /><br />
+                                    학술대회 안내<br /><br />
+                                    뉴스레터 발송</td>
+                                <td style="text-align: center;" class="line">이메일</td>
+                                <td style="text-align: center;" class="line">2년</td>
+                            </tr>
+                        </table>
+                    </div>
+            
+                    <div class="personal_checkbox">
+                        <div>
+                            <input id="fourth_check" class="check" type="checkbox" />
+                            <label for="fourth_check"> 차기 학술대회 관련 안내 이메일 수신 동의 <span style="color: #7d8597;">(선택)</span>
+                            </label>
+            
+                        </div>
+            
+                        <table class="tbl_type01" id="optionalAgreeInfoMobile" style="width: 100%;">
+                            <colgroup>
+                                <col width="40%">
+                                <col width="30%">
+                                <col width="30%">
+                            </colgroup>
+                            <tr>
+                                <th>수집 목적</th>
+                                <th class="line_th">수집 항목</th>
+                                <th class="line_th">보유 기간</th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">학술대회 안내 및<br /><br />
+                                    모바일 초대권 발송</td>
+                                <td style="text-align: center;" class="line">휴대폰 번호</td>
+                                <td style="text-align: center;" class="line">2년</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="next_btn_box">
+                  
+                        <button type="button" class="next_btn w-60 h-15 bg-sky-900 text-white p-3 my-5 text-lg">Submit</button>
+                    </div>
+                </div>   
+            </div>
         </div>
     </div>
     </div>
 </body>
+<script>
+    const wrap_1 = document.querySelector("#page_1")
+    const wrap_2 = document.querySelector("#page_2")
+    const wrap_3 = document.querySelector("#page_3")
+    const wrap_4 = document.querySelector("#page_4")
+    
+    const firstName = document.querySelector("#firstName");
+    const LastName = document.querySelector("#lastName");
+    const KoreanName = document.querySelector("#KoreanName");
+    
+    const contry = document.querySelector("#nation_no");
+    
+    const affilation = document.querySelector("#affiliation");
+    
+    const phone = document.querySelector("#phoneNumber")
+    
+    const email_1 = document.querySelector("#Email1")
+    const email_2 = document.querySelector("#Email2")
+    const email_3 = document.querySelector("#Email3")
+    
+    const member = document.querySelector("#member");
+    const nonMember = document.querySelector("#non_member")
+    
+    // const participation = document.querySelector("#Participation");
+    const participationSelect = document.querySelector("#Participation_1")
+    
+    // const category = document.querySelector("#Category")
+    const categorySelect = document.querySelector("#Category_1")
+    const categoryOthers = document.querySelector("#category_others")
+    
+    const need = document.querySelector("#need");
+    const nonNeed = document.querySelector("#non_need")
+    
+    const doctor = document.querySelector("#doctor");
+    const specialist = document.querySelector("#specialist")
+    
+    const yes_1 = document.querySelector("#yes_1")
+    const no_1 = document.querySelector("#no_1")
+    const yes_2 = document.querySelector("#yes_2")
+    const no_2 = document.querySelector("#no_2")
+    const yes_3 = document.querySelector("#yes_3")
+    const no_3 = document.querySelector("#no_3")
+    const yes_4 = document.querySelector("#yes_4")
+    const no_4 = document.querySelector("#no_4")
+    const yes_5 = document.querySelector("#yes_5")
+    const no_5 = document.querySelector("#no_5")
+    
+    const participationRadios = document.querySelectorAll('.session_radio');
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const allCheck = document.querySelector("#all_check");
+    const checkedbox2 = document.querySelectorAll('.check');
+    const firstCheck = document.querySelector("#first_check");
+    const secondCheck = document.querySelector("#second_check");
+    const thirdCheck = document.querySelector("#third_check");
+    const fourthCheck = document.querySelector("#fourth_check");
+    
+    const submitButton = document.querySelector("#page_3_btn")
+    const finalButton = document.querySelector(".next_btn")
+    const firstPageBtn = document.querySelector("#page_1_btn")
+    const secondPageBtn = document.querySelector("#page_2_btn")
+    const thirdPageBtn = document.querySelector("#page_3_btn")
+    const fourthPageBtn = document.querySelector("#page_4_btn")
+    
+    /**영어 유효성 검사 */
+    firstName.addEventListener("input", (event) => {
+        englishInput(event)
+    })
+    LastName.addEventListener("input", (event) => {
+        englishInput(event)
+    })
+    
+    function englishInput(event) {
+        const inputValue = event.target.value;
+        const onlyEnglish = /^[A-Za-z]+$/;
+    
+        if (!onlyEnglish.test(inputValue)) {
+            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
+        }
+    }
+    
+    
+    /**한국어 유효성 검사 */
+    KoreanName.addEventListener('input', (event) => {
+        const inputValue = event.target.value;
+        const onlyHangul = /^[ㄱ-ㅎㅏ-ㅣ가-힣]+$/;
+    
+        if (!onlyHangul.test(inputValue)) {
+            event.target.value = inputValue.replace(/[^\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]+/g, '');
+        }
+    });
+    
+    /**휴대폰 유효성 검사 */
+    phone.addEventListener('input', (event) => {
+        const inputValue = event.target.value;
+        const onlyNumbers = /^[0-9]+$/;
+    
+        if (!onlyNumbers.test(inputValue)) {
+            event.target.value = inputValue.replace(/\D/g, '');
+        }
+    });
+ 
+    email_3.addEventListener("click", () => {
+        email_2.value = email_3.options[email_3.selectedIndex].value
+    })
+    
+    member.addEventListener("click", () => {
+        if (member.checked) {
+            nonMember.checked = false;
+        } else {
+            member.checked = true;
+        }
+    })
+    
+    nonMember.addEventListener("click", () => {
+        if (nonMember.checked) {
+            member.checked = false;
+        } else {
+            nonMember.checked = true;
+        }
+    })
+    
+    // participationSelect.addEventListener("click", () => {
+    //     participation.value = participationSelect.options[participationSelect.selectedIndex].value
+    // })
+    
+    categorySelect.addEventListener("click", () => {
+        const categoryValue = categorySelect.options[categorySelect.selectedIndex].value;
+        if (categoryValue === "Others") {
+            categoryOthers.style.display = "";
+        } else {
+            categoryOthers.style.display = "none";
+        }
+    })
+    
+    nonNeed.addEventListener("click", () => {
+        if (nonNeed.checked) {
+            need.checked = false;
+            doctor.disabled = true;
+            specialist.disabled = true;
+        } else {
+            need.checked = true
+            doctor.disabled = false;
+            specialist.disabled = false;
+        }
+    })
+    
+    need.addEventListener("click", () => {
+        if (need.checked) {
+            nonNeed.checked = false;
+            doctor.disabled = false;
+            specialist.disabled = false;
+        }
+    })
+    
+    const numArray = [1, 2, 3, 4, 5];
+    let one = false;
+    let two = false;
+    let three = false;
+    let four = false;
+    let five = false;
+    
+    let first = false;
+    let second = false;
+    let third = false;
+    let fourth = false;
+    let fiveth = false;
+    
+    numArray.forEach((num) => {
+        const yes_num = document.getElementById(`yes_${num}`);
+        const no_num = document.getElementById(`no_${num}`);
+    
+        yes_num.addEventListener("click", () => {
+            if (yes_num.checked) {
+                no_num.checked = false;
+            } else {
+                yes_num.checked = true;
+            }
+            if (num === 1 && yes_num.checked) {
+                one = true;
+                first = true;
+                return;
+            }
+            if (num === 2 && yes_num.checked) {
+                two = true;
+                second = true;
+                return;
+            }
+            if (num === 3 && yes_num.checked) {
+                three = true;
+                third = true;
+                return;
+            }
+            if (num === 4 && yes_num.checked) {
+                four = true;
+                fourth = true;
+                return;
+            }
+            if (num === 5 && yes_num.checked) {
+                five = true;
+                fiveth = true;
+                return;
+            }
+        });
+    
+        no_num.addEventListener("click", () => {
+            if (no_num.checked) {
+                yes_num.checked = false;
+            } else {
+                no_num.checked = true;
+            }
+            if (num === 1 && no_num.checked) {
+                one = true;
+                return;
+            }
+            if (num === 2 && no_num.checked) {
+                two = true;
+                return;
+            }
+            if (num === 3 && no_num.checked) {
+                three = true;
+                return;
+            }
+            if (num === 4 && no_num.checked) {
+                four = true;
+                return;
+            }
+            if (num === 5 && no_num.checked) {
+                five = true;
+                return;
+            }
+        });
+    });
+    
+    let checkedArr = []
+    
+    firstPageBtn.addEventListener("click", (e) => {
+        onSubmit(e)
+    })
+    allCheck.addEventListener("click", () => selectAll());
+    /**모두 체크 눌렀을 때 */
+    function selectAll() {
+        checkedbox2.forEach((checkbox) => {
+            checkbox.checked = allCheck.checked
+        })
+        checkedArr = [firstCheck.checked, secondCheck.checked, thirdCheck.checked, fourthCheck.checked];
+    }
+    
+    
+    finalButton.addEventListener("click", () => onClickSubmit())
+    
+    function onSubmit(e) {
+        e.preventDefault()
+        if (!firstName.value || !LastName.value) {
+            alert("invaild Name");
+            firstName.focus()
+            return;
+        }
+        if (!contry.value) {
+            alert("invaild contry");
+            contry.focus()
+            return;
+        }
+        if (!affilation.value) {
+            alert("invaild affilation");
+            affilation.focus()
+            return;
+        }
+        if (!phone.value) {
+            alert("invaild phone");
+            phone.focus()
+            return;
+        }
+        if (!email_1.value) {
+            alert("invaild email");
+            email_1.focus()
+            return;
+        }
+        if (!member.checked && !nonMember.checked) {
+            alert("invaild member");
+            member.focus()
+            return;
+        }
+        if (!participationSelect.options[participationSelect.selectedIndex].value) {
+            alert("invaild participation");
+            participationSelect.focus()
+            return;
+        }
+        if (!categorySelect.options[categorySelect.selectedIndex].value) {
+            alert("invaild category");
+            categorySelect.focus()
+            return;
+        }
+        if (categorySelect.options[categorySelect.selectedIndex].value === "Others" && !categoryOthers.value) {
+            alert("invaild category");
+            categoryOthers.focus()
+            return;
+        }
+        if (!need.checked && !nonNeed.checked) {
+            alert("invaild grade");
+            need.focus()
+            return;
+        }
+    
+        if (need.checked && !doctor.value && !specialist.value) {
+            alert("invaild grade");
+            need.focus()
+            return;
+        }
+    wrap_1.style.display = "none"
+    wrap_2.style.display = ""
+    wrap_3.style.display = "none"
+    wrap_4.style.display = "none"
+    yes_1.focus()
+    }
+
+    secondPageBtn.addEventListener("click", ()=>{
+        if (!one || !two || !three || !four || !five) {
+            alert("invaild  Session participation");
+            return;
+        }
+    wrap_1.style.display = "none"
+    wrap_2.style.display = "none"
+    wrap_3.style.display = ""
+    wrap_4.style.display = "none"
+    page3.focus()
+    })
+
+    thirdPageBtn.addEventListener("click", ()=>{
+  
+        const isAnyCheckboxChecked = Array.from(checkboxes).some((checkbox) => checkbox.checked);
+    
+        if (!isAnyCheckboxChecked) {
+            alert("Please select at least one option.");
+            return;
+        }
+    
+        wrap_1.style.display = "none"
+        wrap_2.style.display = "none"
+        wrap_3.style.display = "none"
+        wrap_4.style.display = ""
+        allCheck.focus()
+    })
+    
+    function onClickSubmit() {
+        if (!firstCheck.checked || !secondCheck.checked) {
+            alert("필수항목을 체크해주세요.")
+            firstCheck.focus()
+            return;
+        } else {
+            checkedArr = [firstCheck.checked, secondCheck.checked, thirdCheck.checked, fourthCheck.checked];
+    
+        }
+        const members = member.checked ? true : false
+        const needs = need.checked ? true : false
+        const checkArray = []
+        checkboxes.forEach((check) => {
+            checkArray.push(check.checked)
+        })
+        console.log("체크항목", checkedArr)
+        console.log("이름", firstName.value, LastName.value, KoreanName.value)
+        console.log("국가", contry.value)
+        console.log("소속", affilation.value)
+        console.log("휴대폰", phone.value)
+        console.log("이메일", email_1.value, email_2.value)
+        console.log("member", members)
+        console.log("참석유형", participationSelect.options[participationSelect.selectedIndex].value)
+        console.log("카테고리", categorySelect.options[categorySelect.selectedIndex].value)
+        console.log("평점신청 여부", needs, doctor.value, specialist.value)
+        console.log("세션참여 여부", [first, second, third, fourth, fiveth])
+        console.log("가입경로", checkArray)
+        // window.location = "/onsite/success";
+    }
+    </script>
 </html>

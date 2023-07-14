@@ -14,14 +14,20 @@
     justify-content: center;
 }
 .qr-info-table{
-    border: 2px solid #ddd;
+    margin-top: 10rem;
+    border: 2px solid #eee;
     border-collapse: collapse;
     width: 60%;
 }
+.qr-info-table th{
+    background-color:thistle;
+}
 
 .qr-info-table>tr, .qr-info-table th, .qr-info-table td {
-    border: 2px solid #ddd;
+    border: 2px solid #eee;
     text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
 }
 .qr-info-table tr{
     height: 3rem;
@@ -37,19 +43,27 @@
         </colgroup>
         <tr>
             <th>이름</th>
-            <td></td>
+            <td><?php if(isset($user['nick_name'])) echo $user['nick_name'] ?></td>
         </tr>
         <tr>
             <th>참가구분</th>
-            <td></td>
+            <td><?php
+                if(isset($user['type'])){
+                    echo $user['type'];
+                }
+            ?></td>
         </tr>
         <tr>
             <th>소속</th>
-            <td></td>
+            <td><?php if(isset($user['org'])) echo $user['org'] ?></td>
         </tr>
         <tr>
             <th>메모</th>
-            <td></td>
+            <td><?php
+                if(isset($user['memo'])){
+                    echo $user['memo'];
+                }
+            ?></td>
         </tr>
 
     </table>
