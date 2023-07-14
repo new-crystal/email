@@ -6,11 +6,7 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 <style>
-    input{
-        padding: 4px 8px!important;
-        border: 1px solid #eee;
-        margin: 4px!important;
-    }
+
     input:focus{
         outline: none;
     }
@@ -34,10 +30,12 @@ span {
     font-weight: 600;
 }
 P{
-    font-size: 14px;
+    font-size: 1.1rem; 
+    line-height: 1.75rem;
     font-weight: 600;
     margin-top: 12px!important;
     margin-bottom: 8px!important;
+    margin: 0;
 }
 
 h2{
@@ -47,32 +45,13 @@ h2{
 input[type=text] {
     border: 1px solid #ddd;
     padding: 8px 16px;
-    height: 2.5rem;
+    height: 2.25rem;
     /* width: 300px; */
-}
-
-input[type=checkbox] {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    transform: translateY(1.5px);
-}
-
-input[type=radio] {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    transform: translateY(2.5px);
-}
-
-span {
-    color: #c1121f;
-    font-weight: 600;
 }
 
 label {
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-right: 1rem;
 }
 
@@ -85,9 +64,6 @@ table {
     border-collapse: collapse;
 }
 
-p {
-    margin: 0;
-}
 
 .tbl_type01 {
     border: 1px solid #7d8597;
@@ -129,7 +105,9 @@ th {
 
 .confirm_box_title {
     text-align: center;
-    background-color: rgb(186 230 253);
+    background-color: rgb(4, 151, 230);
+    color: #fff;
+    font-weight: 500;
 }
 
 .all_checkbox {
@@ -208,23 +186,25 @@ th {
 
 <body>
     <div class="w-full h-full flex items-center justify-center overflow-x-hidden overflow-y-scroll">
-    <div class="w-full max-w-5xl px-3 py-2">
-        <div class="text-center text-2xl font-semibold">
-            <h1>On-site registration(현장 등록)</h1>
+    <div class="w-full max-w-4xl px-3 py-2">
+        <div class="text-center text-2xl font-semibold bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-3 text-white">
+            <h1>On-site registration<br>(현장 등록)</h1>
         </div>
-        <div class="w-11/12 mt-5">
+        <div class="w-11/12 mt-5 mx-auto">
                 <div id="page_1">
                 <div>
-                    <p>Name(이름)<span>*</span></p>
-                    <div class="flex justify-between">
-                        <input id="firstName" class="w-6/12"  placeholder="*firstName"/>
-                        <input id="lastName" class="w-6/12" placeholder="*lastName"/>
+                        <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Name(이름)<span>*</span></p>
+                    <div class="flex justify-between w-full mb-2">
+                        <input type="text" id="firstName" class="w-[49%]"  placeholder="*firstName"/>
+                        <input type="text" id="lastName" class="w-[49%]" placeholder="*lastName"/>
                     </div>
-                    <input id="KoreanName" class="w-[98%]" placeholder="국문이름">
+                    <input type="text" id="KoreanName" class="w-full" placeholder="국문이름">
                 </div>
                 <div>
-                    <p>Contry(국가)<span>*</span></p>
-                    <select id="nation_no" name="nation_no" class="px-2 py-1 w-full h-10 border">
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Contry(국가)<span>*</span></p>
+                    <select id="nation_no" name="nation_no" class="px-2 py-1 w-full h-9 border">
                         <option value="" selected="" hidden="" data-nt="82">Contry</option>
                         <option data-nt="82" value="25">Republic of Korea</option>
                         <option data-nt="93" value="122">Afghanistan</option>
@@ -445,21 +425,24 @@ th {
                     </select>
                 </div>
                 <div>
-                    <p>Affiliation(소속)<span>*</span></p>
-                        <input id="affiliation" class="w-[98%]" placeholder="*소속을 입력해주세요">
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Affiliation(소속)<span>*</span></p>
+                        <input type="text" id="affiliation" class="w-full" placeholder="*소속을 입력해주세요">
                 </div>
                 <div>
-                    <p>Mobile Phone Number(휴대전화번호)<span>*</span></p>
-                        <input id="phoneNumber" class="w-[98%]" placeholder="ex)010-0000-0000 *">
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Mobile Phone Number(휴대전화번호)<span>*</span></p>
+                        <input type="text" id="phoneNumber" class="w-full" placeholder="* -를 제외한 숫자만 입력해주세요">
                 </div>
                 <div>
-                    <p>E-mail(이메일)<span>*</span></p>
-                    <div class="flex items-center">
-                    <input type="text" name="Email1" id="Email1" maxlength="64" value="" class="w-4/12">
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">E-mail(이메일)<span>*</span></p>
+                    <div class="flex items-center justify-space">
+                    <input type="text" name="Email1" id="Email1" maxlength="64" value="" class="w-[40%] mr-2">
                     <p>@</p>
-                    <input type="text" name="Email2" id="Email2" maxlength="64" value="" class="w-4/12">
-                    <select name="Email3" id="Email3" class="border"
-                        style="background-color:#ffffff;width:100px; height:35px;">
+                    <input type="text" name="Email2" id="Email2" maxlength="64" value="" class="w-[40%] ml-2">
+                    <select name="Email3" id="Email3" class="border w-[15%] h-9 ml-3"
+                        style="background-color:#ffffff;">
                         <option value="" selected="selected">직접입력</option>
                         <option value="naver.com">naver.com</option>
                         <option value="daum.net">daum.net</option>
@@ -477,7 +460,8 @@ th {
                     </select>
                 </div>
                 <div>
-                    <p>Member(학회 회원 여부)<span>*</span></p>
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Member(학회 회원 여부)<span>*</span></p>
                     <div class="flex flex-nowrap flex-col">
                         <div class="block">
                             <input type="radio" id="member" />
@@ -491,10 +475,11 @@ th {
                 </div>
 
                 <div>
-                    <p>Type of Participation(참석유형)<span>*</span></p>
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Type of Participation(참석유형)<span>*</span></p>
                     <div class="flex justify-between items-center">
                         <select id="Participation_1" style="background-color:#ffffff;"
-                            class="px-2 py-1 w-full h-10 border">
+                            class="px-2 py-1 w-full h-9 border">
                             <option value="" selected="selected">* 필수 선택사항</option>
                             <option value="Committee">Committee</option>
                             <option value="Speaker">Speaker</option>
@@ -506,9 +491,10 @@ th {
                 </div>
 
                 <div>
-                    <p>Category(참석자 구분)<span>*</span></p>
+                    <img src="./circle.png" class="inline-block"/>
+                        <p class="inline-block">Category(참석자 구분)<span>*</span></p>
                     <div class="flex justify-between items-center">
-                        <select id="Category_1" style="background-color:#ffffff;" class="px-2 py-1 w-full h-10 border">
+                        <select id="Category_1" style="background-color:#ffffff;" class="px-2 py-1 w-full h-9 border">
                             <option value="" selected="selected">* 필수 선택사항</option>
                             <option value="Certified M.D.">Certified M.D.</option>
                             <option value="Fellow">Fellow</option>
@@ -529,7 +515,8 @@ th {
                 </div>
 
                 <div>
-                    <p>Only Korean(평점신청 여부)<span>*</span></p>
+                    <img src="./circle.png" class="inline-block"/>
+                    <p class="inline-block">Only Korean(평점신청 여부)<span>*</span></p>
                     <div class="h-12">
                         <input type="radio" id="need" />
                         <label for="need">필요</label>
@@ -538,11 +525,11 @@ th {
                     </div>
                     <div class="flex items-center w-12/12 justify-left flex-wrap">
                         <div class="flex items-center">
-                            <p class="mx-2">의사면허번호</p>
+                            <p class="mx-2 text-xs">의사면허번호</p>
                             <input id="doctor" type="text" class="mx-2" />
                         </div>
-                        <div class="flex items-center">
-                            <p class="mx-4"> 전문의번호 </p>
+                        <div class="flex items-center mt-2">
+                            <p class="mr-[1.3rem] ml-4 text-xs"> 전문의번호 </p>
                             <input id="specialist" type="text" />
                         </div>
                     </div>
@@ -551,8 +538,11 @@ th {
             </div>
         </div>
 <!-- ==========================================================================================================/ -->
-                <div id="page_2"  class="flex flex-col items-center justify-center text-center my-20" style="display: none;">
-                    <h2>Session participation(세션참여 여부)<span>*</span></h2>
+                <div id="page_2"  class="flex flex-col items-center justify-center text-center my-20">
+                    <div>
+                        <img src="./circle.png" class="inline-block"/>
+                        <h2 class="inline-block">Session participation(세션참여 여부)<span>*</span></h2>
+                    </div>
     
                         <p>Welcome Reception <br>- September 7(Thu) </p>
                         <div>
@@ -597,65 +587,67 @@ th {
                 </div>
 <!-- ==========================================================================================================/ -->
 
-                <div id="page_3" class="mt-20" style="display: none;">
-                    <h2 class="mb-5">Where did you get the information about the conference?(가입경로)</h2>
+                <div id="page_3" class="mt-5">
+                    <div class="mb-4">
+                        <img src="./circle.png" class="inline"/>
+                        <h2 class="mb-5 inline">Where did you get the information about the conference?(가입경로)</h2>
+                    </div>
                     <div class="flex flex-col">
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="A" />
-                            <label for="A">Website of the Korea Society of Obesity
+                            <label class="text-[0.8rem]" for="A">Website of the Korea Society of Obesity
                             </label>
                         </div>
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="B" />
-                            <label for="B">Promotional email <br>from the Korea Society of Obesity
+                            <label class="text-[0.8rem]" for="B">Promotional email <br>from the Korea Society of Obesity
                             </label>
                         </div>
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="C" />
-                            <label for="C">Advertising email or <br>the bulletin board from the relevant society
+                            <label class="text-[0.8rem]" for="C">Advertising email or <br>the bulletin board from the relevant society
                             </label>
                         </div>
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="D" />
-                            <label for="D">Information about affiliated companies/organizations
+                            <label class="text-[0.8rem]" for="D">Information about affiliated <br>companies/organizations
                             </label>
                         </div>
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="E" />
-                            <label for="E">Invited as a speaker, moderator, and panelist
+                            <label class="text-[0.8rem]" for="E">Invited as a speaker, <br>moderator, and panelist
                             </label>
                         </div>
                         <div class="flex items-center mb-4 ">
                             <input class="checkbox" type="checkbox" id="F" />
-                            <label for="F">Recommended by a professor
+                            <label class="text-[0.8rem]" for="F">Recommended by a professor
                             </label>
                         </div>
                         <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="G" />
-                            <label for="G">Recommended by acquaintances
+                            <label class="text-[0.8rem]" for="G">Recommended by acquaintances
                             </label>
                         </div>
                         <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="H" />
-                            <label for="H">Pharmaceutical company
+                            <label class="text-[0.8rem]" for="H">Pharmaceutical company
                             </label>
                         </div>
                         <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="I" />
-                            <label for="I">Medical community (MEDI:GATE, Dr.Ville, etc.)
-
+                            <label class="text-[0.8rem]" for="I">Medical community <br>(MEDI:GATE, Dr.Ville, etc.)
                             </label>
                         </div>
                         <div class="flex items-center mb-4">
                             <input class="checkbox" type="checkbox" id="J" />
-                            <label for="J">Medical news and journal
+                            <label class="text-[0.8rem]" for="J">Medical news and journal
                             </label>
                         </div>
                     </div>
                     <button id="page_3_btn" class="mx-auto w-60 h-15 bg-sky-900 text-white p-3 my-5 text-lg flex items-center justify-center mt-20">Next</button>
                 </div>
                 <!-- ================================================================================================/ -->
-                <div id="page_4" class="wrap_2" style="display: none;">
+                <div id="page_4" class="wrap_2">
                     <div class="confirm_box mt-10">
                         <div class="confirm_box_title flex items-center justify-center">
                             <h1 class="text-xl">Use of Personal Information <br>(개인정보활용동의)</h1>
